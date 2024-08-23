@@ -47,9 +47,7 @@ else
 fi
 
 echo "开始安装 ServerlessFramework"
-sudo npm install -g serverless@2 >>/dev/null
-sudo npm install -g @serverless/components
-
+sudo npm install -g serverless >>/dev/null
 
 sudo mkdir tmp/
 shopt -s extglob
