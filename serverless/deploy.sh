@@ -48,6 +48,7 @@ fi
 
 echo "开始安装 ServerlessFramework"
 sudo npm install -g serverless@3 >>/dev/null
+sudo npm install -g @serverless/components
 
 
 sudo mkdir tmp/
@@ -59,7 +60,7 @@ sudo mv serverless.yml tmp
 
 cd tmp
 echo "开始部署到腾讯云函数"
-result=$(sudo sls deploy --debug)
+result=$(sudo components deploy --debug)
 if [[ $result == *执行成功* ]]; then
 	echo -e "\033[1;32m部署成功 \033[0m"
 else
