@@ -48,6 +48,14 @@ fi
 
 echo "开始安装 ServerlessFramework"
 sudo npm install -g serverless >>/dev/null
+
+# 使用 Serverless Framework License Key 登录
+export SERVERLESS_ACCESS_KEY=AKKsB8sSOlX5Fb3wSgQkUdVIRpZVwHy9MJya7OfKeA2Rc
+
+# 如果你还没有登录，可以使用如下方式登录
+serverless login --api-key $SERVERLESS_ACCESS_KEY
+
+
 sudo mkdir tmp/
 shopt -s extglob
 sudo mv !(tmp|serverless|public|code|.github|.git|ql_update.py|__pycache__|Dockerfile|.dockerignore|scheduler.py) tmp
