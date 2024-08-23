@@ -31,10 +31,10 @@ jobs:
           fi   
       - name: Clone local repository
         uses: actions/checkout@v2
-      - name: Set up Python 3.6.12
+      - name: Set up Python 3.9.12
         uses: actions/setup-python@v2
         with:
-          python-version: 3.6.12
+          python-version: 3.9.12
       - name: Install python dependencies
         run: pip install tencentcloud-sdk-python json5
       - name: Deploy
