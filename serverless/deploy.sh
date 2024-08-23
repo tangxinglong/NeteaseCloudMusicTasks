@@ -55,8 +55,6 @@ sudo mv !(tmp|serverless|public|code|.github|.git|ql_update.py|__pycache__|Docke
 python serverless/createyml.py
 sudo mv serverless.yml tmp
 
-serverless login
-
 cd tmp
 echo "开始部署到腾讯云函数"
 result=$(sudo sls deploy --debug)
